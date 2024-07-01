@@ -1,6 +1,6 @@
 option =""
 started = False
-stopped = False
+#stopped = False
 while True:
     option = input().capitalize()
     if(option == "Start"):
@@ -10,10 +10,10 @@ while True:
             started = True
             print("Starting the car")
     elif(option == "Stop"):
-        if stopped:
+        if not started:
             print("Car is already stopped")
         else:
-            stopped = True
+            started = False
             print("Stopping the car")
     elif (option == "Help" ):
         print("""Start- to start the car
